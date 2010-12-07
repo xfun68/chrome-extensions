@@ -1,7 +1,7 @@
 {
   "name": "myCollections",
   "description": "Help you collect some useful words.",
-  "version": "0.0",
-  "permissions": ["contextMenus"],
+  "version": "0.0.1",
+  "permissions": ["contextMenus", "tabs"],
   "background_page": "background.html"
 }
