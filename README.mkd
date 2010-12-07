@@ -1,3 +1,9 @@
 # My Chrome Extensions
 
-There is nothing else.
+  Some handy extensions to help me learning english, remind me to browse some pages cause I hadn't time when I first found them.
+
+## myCollections
+
+  This extension is used for collecting some useful words, sentences or paragraphs from web pages,
+  so that you can pick them up again when you are free, other than forgetting them like never seen them.
+
