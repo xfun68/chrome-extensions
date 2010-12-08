@@ -1,14 +1,17 @@
-var selectionText = "No selection text";
+var selectionText = "Nothing selected.";
 
 function showSelectionText(info, tab) {
+  console.log("item " + info.menuItemId + " was clicked");
+  console.log("info: " + JSON.stringify(info));
+  console.log("tab: " + JSON.stringify(tab));
+  console.log("selectionText: " + info.selectionText);
+
   selectionText = info.selectionText;
-  chrome.windows.create("url": "collection.html", "type": "popup");
+
+  chrome.windows.create({url: "collection.html#" + selectionText, type: "popup"});
 }
 
-var id = chrome.contextMenus.create({"title": "myCollections",
-                                    "type": "normal",
-                                    "contexts": ["selection"],
-                                    "onclick": showSelectionText});
-
-var radio1 = chrome.contextMenus.create({"title": "Radio 1", "type": "radio",
-                                         "onclick":radioOnClick});
+var collect_menu = chrome.contextMenus.create({"title": "Collect it",
+                                                "type": "normal",
+                                                "contexts":["selection"],
+                                                "onclick": showSelectionText});
