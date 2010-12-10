@@ -8,7 +8,14 @@ function editSelectionText(info, tab) {
 
   selectionText = info.selectionText;
 
-  chrome.windows.create({url: "collection.html#" + selectionText, type: "popup"});
+  popup = chrome.windows.create({url: "http://xfun68.github.com/", type: "popup"});
+  popup_document = popup.document;
+  var element = popup_document.createElement("input");
+  element.setAttrivute("type", "button");
+  element.setAttrivute("value", "button");
+  element.setAttrivute("name", "button");
+  var home = popup_document.getElementById("home");
+  home.appendChild(element);
 }
 
 var collect_menu = chrome.contextMenus.create({"title": "Edit Collection",
